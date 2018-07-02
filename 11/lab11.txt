@@ -1,0 +1,16 @@
+1. sends the message to each client
+2. clients.
+3. This method  gets a String object of id.
+4. No, to keep track of client connected to the server.
+5. 
+21 ServerSocket serverSocket = new ServerSocket(port);
+22 System.err.println("ChatServer started");
+23 while (true) {
+24 ClientHandler ch = new ClientHandler(serverSocket.accept());
+25 System.err.println("Accepted connection from " + ch);
+26 synchronized (clients) {
+27 clients.add(ch);
+28}
+29 ch.start();
+
+6. 3 for each client and 4 for server(3 client+1 server itself).

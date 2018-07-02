@@ -1,0 +1,20 @@
+import java.util.*;
+
+import java.text.*;
+
+ 
+
+public class DateExample {
+
+    public static void main(String args[]) {
+
+        // Instantiate a Date object
+
+        Date date = new Date();
+
+        // Get current date and time
+
+        // 1st way: current time and date using toString()
+        System.out.println("Today's date is: "+date.toString());
+    }
+}

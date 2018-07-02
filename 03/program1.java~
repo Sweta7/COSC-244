@@ -1,0 +1,9 @@
+import java.io.*;  // import the package
+public class program1{
+    public static void main(String[] args) throws IOException {
+        inputStream inp= new inputstream (System.in);
+        System.out.println("Enter a character");
+        char name= inp.read();
+        System.out.println("This is the " + name);
+    }
+        

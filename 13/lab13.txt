@@ -1,0 +1,11 @@
+1. Return integer which is the local port number to which this socket is bound.
+
+2. Returns the address to which the socket is connected.
+
+3. Returns the remote port number to which this socket is connected.
+
+4. Prints on the Client machine -the IP address to which the socket is connected and the remote port number with which the socket is bound and the local port client is using.
+  
+5. Prints on the server machine - that it accepted the new connection and then displays the clients host- IP address, and the clients port that will be connected with the remote Port and the local port server is using.
+
+

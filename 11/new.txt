@@ -1,0 +1,39 @@
+Q1.Explain the purpose of the send() method of ClientHandler
+To send line to only one client.
+
+Q2.Where is the line in send() going to?
+A:It is going to each clients.
+
+Q3.Explain the purpose of the toString() method of ClientHandler
+A:To be a getter method of Id.
+
+Q4.When a client closes a connection and terminates, and then a 
+new client connects, is the client number recycled? Why or why not?
+A:No. Based on line 53:id = "client_"+ ++count;,whenever a new client
+connects with, instead of recycling numbers, server gives the,
+client a new number.
+
+Q5.List the lines of code executed when the ChatServer starts up to 
+the point where it is listening for its first connection. 
+The list should be in execution order.
+A:new ChatServer().startServer(Integer.parseInt(args[0]));
+13  ServerSocket serverSocket = new ServerSocket(port);
+22  System.err.println("ChatServer started");
+23  while (true) {
+24  ClientHandler ch = new ClientHandler(serverSocket.accept());
+25  System.err.println("Accepted connection from " + ch);
+26  synchronized (clients) {
+27  clients.add(ch);
+Q6.If 3 clients have connected to ChatServer, how many threads 
+are running assuming no client has terminated. 
+Include the client threads in your count.
+A:Each client holds 3 and server holds 4. There are 13 of threads in all.
+
+Q7.Describe what each thread from Q6 is doing. 
+For threads which are performing the same task but for different clients,
+you should state how many of that particular thread is running. 
+If you did not correctly answer Q6, complete this question after
+you get the correct answer and before you leave the lab. 
+You will not get the mark for this lab until both questions 
+are answered correctly
+A:There are 3 clients, each client holds its own main method and other two start() methods.While server holds its own main method and other three threads for 3 clients.

@@ -1,0 +1,18 @@
+//import java.io.IOException;
+
+import java.io.*;  // import the package
+public class program2{
+  public static void main(String args[])throws IOException {
+      InputStreamReader isr = new InputStreamReader(System.in);
+      BufferedReader br = new BufferedReader(isr);
+      System.out.println("What is Your Name ?");
+      String name = br.readLine(); // take a string as input from keyboard
+      System.out.print("What is YourGender ( M/F ) ?");
+      char gender = (char)br.read(); // take a character as input
+      System.out.print("Do you like Java ( Y/N ) ?");
+      char like_java = (char)System.in.read(); // another way to read a char
+      System.out.println("Hello " + name);
+      System.out.println("Gender : " + gender);
+      System.out.println("Like Java : " + like_java);
+   }
+}

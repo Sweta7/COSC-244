@@ -1,0 +1,94 @@
+# -*- mode: org -*-
+
+_Cosc244/Tele202 - Lab 4 answers_
+
+  1. 
+     |--------+--------+---------+-------------------+----------+--------------------|
+     | =code= | =prev= | =entry= | =prev + entry[0]= | =output= |       =dictionary= |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |        |        |         |                   |          | ASCII code (0-255) |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     84 |     84 |         |                   |       84 |                    |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     79 |     84 |      79 | 84 79             |       79 |            256 TO  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     66 |     79 |      66 | 79 66             |       66 |            257 OB  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     69 |     66 |      69 | 66 69             |       69 |            258 BE  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     79 |     69 |      79 | 69 79             |       79 |            259 EO  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     82 |     79 |      82 | 79 82             |       82 |            260 OR  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     78 |     82 |      78 | 82 78             |       78 |            261 RN  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     79 |     78 |      79 | 78 79             |       79 |            262 NO  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |     84 |     79 |      84 | 79 84             |       84 |            263 OT  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    256 |     84 |     256 | 84 84             |      256 |            264 TT  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    258 |    256 |     258 | 84 79 66          |      258 |            265 TOB |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    260 |    258 |     260 | 66 69 79          |      260 |            266 BEO |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    265 |    260 |     265 | 79 82 84          |      265 |            267 ORT |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    259 |    265 |     259 | 84 79 66 69       |      259 |           268 TOBE |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    261 |    259 |     261 | 69 79 82          |      261 |           269 EOR  |
+     |--------+--------+---------+-------------------+----------+--------------------|
+     |    263 |    261 |     263 | 82 78 79          |      263 |           270 RNO  |
+     |        |        |         |                   |          |                    |
+     |--------+--------+---------+-------------------+----------+--------------------|
+TOBEORNOTTOBEORTOBEORNO
+
+
+  2. Briefly describe the second input parameter of the BitOutputStream constructor.
+     
+     The size of bitfields which writes to the given OutputStream.
+  
+  3. What is the purpose of the method, setBitFieldSize()?
+     Sets the bitfield size to bits.
+     
+  
+  4. What is the purpose of the method, write()?
+     To write a bitfield to the output stream. The number of bits written is the current 		bitfield length.
+   
+  5. What is the purpose of the method, close()?
+     To correctly flush any remaining bitfields in write buffer before closing output chain.
+     
+
+  6. What is the purpose of the method, setBitFieldSize()?
+     Sets the size of the bitfield to equal bits.
+     
+  
+  7. What is the purpose of the method, read()?
+     To read a bitfield from the input stream. The number of bits read is the current bitfield 		length.
+     
+
+  8. Briefly describe what LookUpTable does.
+     This is the data structure that stores string/code pairs so they can be easily retrieved.
+     It also contains a constant (GROW_CODE) which is used as a flag to indicate
+     that the next code needs one extra bit to store it (compared to the largest of the 	  previous codes).
+     
+
+  9. What is the purpose of the method, add()?
+     Add a new string to this look-up table.
+     
+
+  10. What is the purpose of the method, hasString()?
+      Determines whether a given string has already been added to the look-up table.
+      
+
+  11. What is the purpose of the method, getCode()?
+      It will look up the compression code for a given string.
+      
+
+  12. What is the purpose of the method, hasCode()?
+      Determines whether a given code is contained in the look-up table.
+      
+  
+  13. What is the purpose of the method, getString()?
+      Look up a string associated with a given compression code.
+      

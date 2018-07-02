@@ -1,0 +1,5 @@
+import java.io.*;  // import the package
+
+
+6. FileOutputStream out = new FileOutputStream("b.txt");
+        

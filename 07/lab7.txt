@@ -1,0 +1,32 @@
+1. It reads bytes and decodes them into cahracters using a specified charset.
+
+2.For best efficiency, more bytes may be read ahead from the underlying stream.
+For top efficiency, consider wrapping an InputStreamReader within a BufferedReader.
+
+3. readLine(), String
+
+4. Prints a String and then terminates it. nothing
+
+5. Creates a server socket, bound to the specified port.
+
+6. Listens for a connection to be made to this socket and accepts it. returns new socket
+
+7. Socket(String host, int port)
+
+8. Returns an input stream for this socket.
+
+9. getOutputStream() returns an output stream for this socket.
+
+10. initializes with current time it was allocated, measured to the nearest millisecond.
+
+
+11. public class datelab{
+ public static void main(String args[]) {
+ Date date = new Date();
+ System.out.println(Today date is " + date.toString());
+ }
+ }
+
+12. port compulsory and host name not compulsory
+ 
+

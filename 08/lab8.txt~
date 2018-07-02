@@ -1,0 +1,36 @@
+1.
+a. By declaring a subclass of class Thread, which should override the run method of class Thread. An instance of the subclass can be then allocated and started.
+
+b. By declaring a class that implements Runnable interface, which then implements the run method. An instance of this class can be then allocated, passed as an argument when creating Thread and then started.
+
+2. run method.
+
+3. start method.
+
+4. 14 and 15.
+
+5. create a thread and start it running.
+
+6.
+
+7. import java.net.*;
+ 
+ public class Client {
+   
+   public static void main(String[] args) {
+     try {
+       int port = Integer.parseInt(args[0]);
+       if (args.length > 1) {
+         Socket socket = new Socket(args[1], port);
+         System.err.println("Connected to " + args[1] + " on port " + port);
+         new ReadWriteThread(socket.getInputStream(), System.out) .start();
+         new ReadWriteThread(System.in, socket.getOutputStream()).start();
+       }
+     }catch (Exception e) {
+         e.printStackTrace();
+         System.err.println("\nUsage: java Server <port>");
+       }
+     }
+   }
+
+8. no effect

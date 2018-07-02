@@ -1,0 +1,33 @@
+1. To synchronise the data printed on all the clients without any intruption through any other thread. i.e. only one thread can access the resource at a given point of time.
+
+2. 23
+
+3.31-41. 
+
+4. chat server started printed out.
+
+5. Server accepted connection from client_1.
+
+6. Connected to localhost on port 7777
+Welcome! You are client_1.
+
+7. Server accepted connection from client_2.
+
+8. Connected to localhost on port 7777
+Welcome! You are client_2.
+
+9. client_1: Hello from client 1
+
+10. client_1: Hello from client 1
+
+11. Sending ?Hello from client 1? to : [client_1, client_2, client_3]
+
+12. client_3 closed connection! 
+
+13. client_1: how its going from client 1
+
+14. Sending ?how its going from client 1? to : [client_1, client_2]
+
+15. client 4
+
+
